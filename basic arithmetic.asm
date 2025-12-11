@@ -1,37 +1,38 @@
-# basic_arithmetic.asm
-# Tests basic DISNEY-8 arithmetic instructions
+# Disney park calculation
 
 .data
-  x: .word 10
-  y: .word 20
-  sum: .word 0
-  diff: .word 0
+  peterpan:    .word 45
+  space:       .word 75
+  splash:      .word 30
+  churro:      .word 6
+  dolewhip:    .word 7
+  total_wait:  .word 0
+  snack_cost:  .word 0
+  budget:      .word 100
+  remaining:   .word 0
 
 .text
-  # DISNEY-8 assembly (conceptual - would need assembler)
-  
-  # Load values
-  # PIRATESOFCARIBBEAN $c1, x    # Load x into C1
-  # PIRATESOFCARIBBEAN $c2, y    # Load y into C2
-  
-  # Addition
-  # SPLASHMOUNTAIN $c3, $c1, $c2  # C3 = 10 + 20 = 30
-  # HAUNTEDMANSION $c3, sum       # Store result
-  
-  # Subtraction  
-  # SPACEMOUNTAIN $c4, $c2, $c1   # C4 = 20 - 10 = 10
-  # HAUNTEDMANSION $c4, diff      # Store result
-  
-  # End
-  # GOODNIGHTKISS                 # Exit program
-  
-  # MIPS equivalent for testing:
   main:
-    lw $t0, x
-    lw $t1, y
-    add $t2, $t0, $t1    # Like SPLASHMOUNTAIN
-    sw $t2, sum
-    sub $t3, $t1, $t0    # Like SPACEMOUNTAIN
-    sw $t3, diff
-    li $v0, 10           # Like GOODNIGHTKISS
+    # Calculate total wait time (SPLASHMOUNTAIN)
+    lw $t0, peterpan
+    lw $t1, space
+    lw $t2, splash
+    add $t3, $t0, $t1
+    add $t3, $t3, $t2
+    sw $t3, total_wait
+    
+    # Calculate snack cost (MICKEYTALE)
+    lw $t4, churro
+    lw $t5, dolewhip
+    li $t6, 5           # Disney magic bonus
+    add $t7, $t4, $t5
+    add $t7, $t7, $t6
+    sw $t7, snack_cost
+    
+    # Check budget (SPACEMOUNTAIN)
+    lw $t8, budget
+    sub $t9, $t8, $t7
+    sw $t9, remaining
+    
+    li $v0, 10          # GOODNIGHTKISS
     syscall
