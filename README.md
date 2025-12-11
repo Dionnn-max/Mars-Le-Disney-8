@@ -36,3 +36,10 @@ Unique Instructions:
   
 DisneyInstruction.java is our blueprint, the rulebook that makes sure every Disney instruction has a magical name and clear purpose. From this foundation comes SplashMountain.java, which turns boring addition into a thrilling water ride where numbers splash together playfully. Next, SpaceMountain.java transforms scary subtraction into a space coaster adventure through positive and negative numbers. The real magic happens with MickeyTale.java, where we add Disney's secret FASTPASS bonus to normal math, showing coding can be creative. Finally, GoodNightKiss.java gives every program a fireworks finale, proving even routine computer tasks can end with joy. Together, they make learning to code feel like a Disney adventure!
 
+How to run/test them in MARS LE: 
+
+First, Take the 5 Java .class files and copy them into MARS's instruction folder. Think of it like giving MARS a new set of Disney themed tools to play with. Then test it : Open the terminal and run java -cp src disney.TestDisney. and then you willnsee all four instructions light up. For actual coding: Open MARS and try the example files. Each Disney instruction has its own secret code: SPLASHMOUNTAIN uses 0000 (it's the ADD water ride), SPACEMOUNTAIN uses 0001 (the SUB space coaster), MICKEYTALE is 1010 (the magical bonus track), and GOODNIGHTKISS is 1111 (the fireworks finale). Once everything's set up, you can write SPLASHMOUNTAIN instead of boring ADD—same math, way more fun! It's like speaking Disney's secret language to your computer. 
+
+
+
+
