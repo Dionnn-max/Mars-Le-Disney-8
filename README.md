@@ -1,7 +1,7 @@
 DISNEY-8: A Magical Assembly Language
 
 Overview
-DISNEY-8 is a Disney-themed assembly language extension for MARS LE that makes learning CPU architecture fun and engaging. This project implements a subset of the DISNEY-8 instruction set as a MARS LE extension in Java.
+DISNEY-8 is a Disney themed assembly language extension for MARS LE that makes learning CPU architecture fun and engaging. This project implements a subset of the DISNEY-8 instruction set as a MARS LE extension in Java.
 
 Features
 - 4 Disney themed instructions implemented in Java
